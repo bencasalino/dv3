@@ -26,18 +26,26 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  submitMessage = message => {
+
+    // event.preventDefault();
+    this.setState({ message, results: "Your application was submitted!", formClass: "success" });
+    //   document.querySelector('#message').textContent = '!'
+    //   document.querySelector('#application-preview').classList.add('hidden')
+    //   document.querySelector('#application-preview').textContent = ''
+  };
+
   render() {
-    return (
-      <div>
+    return <div>
         <Header />
         <main>
           <JobDetails jobData={this.state.data} />
-          <InputForm />
-          <Preview />
+          <InputForm submitMessage={this.submitMessage} />
+
+          <Preview submitMessage={this.submitMessage} message={this.state.message} />
         </main>
         <Footer />
-      </div>
-    );
+      </div>;
   }
 }
 
