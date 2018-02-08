@@ -1,6 +1,6 @@
 describe("Form submission", () => {
   it("Has a job application page", () => {
-    cy.visit("https://dinosv3.herokuapp.com/");
+    cy.visit("https://secret-eyrie-71962.herokuapp.com/");
 
     cy.get("#application-preview").should("be.hidden");
     cy.get("#preview-toggle").click();
