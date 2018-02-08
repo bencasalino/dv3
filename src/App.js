@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { JobDetails } from "./JobDetails";
 import { InputForm } from "./InputForm.js";
 import { Preview } from "./Preview.js";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -33,7 +33,7 @@ class App extends Component {
         <main>
           <JobDetails jobData={this.state.data} />
           <InputForm />
-          <preview />
+          <Preview />
         </main>
         <Footer />
       </div>
